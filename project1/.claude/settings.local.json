@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx @nestjs/cli@latest new backend --package-manager npm --skip-git --strict)",
+      "Bash(npm install:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node -e \"const { Role } = require\\(''@prisma/client''\\); console.log\\(Role\\);\")"
+    ]
+  }
+}
