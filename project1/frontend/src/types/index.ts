@@ -6,6 +6,7 @@ export interface User {
   email: string;
   nickname: string;
   role: Role;
+  profileImageUrl?: string | null;
 }
 
 export interface Category {
@@ -29,6 +30,22 @@ export interface Section {
   lectures: Lecture[];
 }
 
+export interface Review {
+  id: number;
+  rating: number;
+  content?: string;
+  userId: number;
+  courseId: number;
+  user: { nickname: string; profileImageUrl?: string | null };
+  createdAt: string;
+}
+
+export interface ReviewsResponse {
+  reviews: Review[];
+  avgRating: number | null;
+  totalCount: number;
+}
+
 export interface Course {
   id: number;
   title: string;
@@ -38,6 +55,9 @@ export interface Course {
   category: Category;
   sections?: Section[];
   createdAt: string;
+  avgRating?: number | null;
+  reviewCount?: number;
+  enrollmentCount?: number;
 }
 
 export interface CourseListItem {
@@ -48,6 +68,9 @@ export interface CourseListItem {
   level: Level;
   category: Category;
   createdAt: string;
+  avgRating?: number | null;
+  reviewCount?: number;
+  enrollmentCount?: number;
 }
 
 export interface CoursesResponse {
@@ -69,7 +92,16 @@ export interface ProgressResponse {
   totalLectures: number;
   completedLectures: number;
   progressRate: number;
+  isCompleted: boolean;
   completedLectureIds: number[];
+}
+
+export interface MyReviewItem {
+  id: number;
+  rating: number;
+  content?: string;
+  createdAt: string;
+  course: { id: number; title: string; thumbnailUrl?: string | null };
 }
 
 export const LEVEL_LABELS: Record<Level, string> = {

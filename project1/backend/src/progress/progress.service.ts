@@ -87,6 +87,7 @@ export class ProgressService {
       totalLectures,
       completedLectures,
       progressRate,
+      isCompleted: totalLectures > 0 && completedLectures === totalLectures,
       completedLectureIds: enrollment.lectureProgress.map((p) => p.lectureId),
     };
   }

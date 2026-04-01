@@ -38,6 +38,18 @@ export default function CourseCard({ course }: Props) {
         {course.description && (
           <p className="text-sm text-gray-500 mt-1 line-clamp-2">{course.description}</p>
         )}
+        <div className="flex items-center gap-3 mt-2">
+          {course.avgRating != null && (
+            <div className="flex items-center gap-1">
+              <span className="text-yellow-400 text-sm">★</span>
+              <span className="text-sm font-medium text-gray-700">{course.avgRating.toFixed(1)}</span>
+              <span className="text-xs text-gray-400">({course.reviewCount})</span>
+            </div>
+          )}
+          {!!course.enrollmentCount && (
+            <span className="text-xs text-gray-400">{course.enrollmentCount.toLocaleString()}명 수강</span>
+          )}
+        </div>
       </div>
     </Link>
   );

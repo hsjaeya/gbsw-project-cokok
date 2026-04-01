@@ -19,15 +19,17 @@ enum Level {
 }
 
 model User {
-  id           Int          @id @default(autoincrement())
-  email        String       @unique
-  password     String
-  nickname     String
-  role         Role         @default(STUDENT)
-  refreshToken String?
-  createdAt    DateTime     @default(now())
-  updatedAt    DateTime     @updatedAt
-  enrollments  Enrollment[]
+  id              Int          @id @default(autoincrement())
+  email           String       @unique
+  password        String
+  nickname        String
+  role            Role         @default(STUDENT)
+  refreshToken    String?
+  profileImageUrl String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  enrollments     Enrollment[]
+  reviews         Review[]
 
   @@map("users")
 }
@@ -54,6 +56,7 @@ model Course {
   updatedAt    DateTime     @updatedAt
   sections     Section[]
   enrollments  Enrollment[]
+  reviews      Review[]
 
   @@map("courses")
 }
@@ -114,4 +117,19 @@ model LectureProgress {
 
   @@unique([enrollmentId, lectureId])
   @@map("lecture_progress")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int
+  content   String?
+  userId    Int
+  courseId  Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, courseId])
+  @@map("reviews")
 }

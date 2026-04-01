@@ -8,6 +8,7 @@ import Register from './pages/Auth/Register';
 import CourseDetail from './pages/CourseDetail';
 import CourseWatch from './pages/CourseWatch';
 import MyPage from './pages/MyPage';
+import Profile from './pages/Profile';
 import AdminLayout from './pages/Admin';
 import AdminCourses from './pages/Admin/Courses';
 import AdminCategories from './pages/Admin/Categories';
@@ -47,6 +48,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/courses/:id" element={<CourseDetail />} />
             <Route path="/mypage" element={<MyPage />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<Navigate to="/admin/courses" replace />} />
               <Route path="courses" element={<AdminCourses />} />

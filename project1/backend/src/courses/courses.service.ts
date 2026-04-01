@@ -44,19 +44,31 @@ export class CoursesService {
               lectures: { orderBy: { order: 'asc' } },
             },
           },
+          reviews: { select: { rating: true } },
+          _count: { select: { enrollments: true } },
         },
         orderBy: { createdAt: 'desc' },
       }),
       this.prisma.course.count({ where }),
     ]);
 
-    const enriched = courses.map(({ sections, ...course }) => ({
-      ...course,
-      thumbnailUrl: resolveThumbnail(
-        course.thumbnailUrl,
-        sections[0]?.lectures[0]?.youtubeVideoId ?? null,
-      ),
-    }));
+    const enriched = courses.map(({ sections, reviews, _count, ...course }) => {
+      const reviewCount = reviews.length;
+      const avgRating =
+        reviewCount > 0
+          ? Math.round((reviews.reduce((s, r) => s + r.rating, 0) / reviewCount) * 10) / 10
+          : null;
+      return {
+        ...course,
+        thumbnailUrl: resolveThumbnail(
+          course.thumbnailUrl,
+          sections[0]?.lectures[0]?.youtubeVideoId ?? null,
+        ),
+        avgRating,
+        reviewCount,
+        enrollmentCount: _count.enrollments,
+      };
+    });
 
     return {
       courses: enriched,
@@ -78,16 +90,30 @@ export class CoursesService {
             lectures: { orderBy: { order: 'asc' } },
           },
         },
+        reviews: { select: { rating: true } },
+        _count: { select: { enrollments: true } },
       },
     });
     if (!course) throw new NotFoundException('Course not found');
 
+    const reviewCount = course.reviews.length;
+    const avgRating =
+      reviewCount > 0
+        ? Math.round(
+            (course.reviews.reduce((s, r) => s + r.rating, 0) / reviewCount) * 10,
+          ) / 10
+        : null;
+
+    const { reviews, _count, ...rest } = course;
     return {
-      ...course,
+      ...rest,
       thumbnailUrl: resolveThumbnail(
         course.thumbnailUrl,
         course.sections[0]?.lectures[0]?.youtubeVideoId ?? null,
       ),
+      avgRating,
+      reviewCount,
+      enrollmentCount: _count.enrollments,
     };
   }
 
