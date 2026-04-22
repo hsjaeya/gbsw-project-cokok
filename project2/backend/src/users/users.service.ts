@@ -7,17 +7,24 @@ import * as bcrypt from 'bcrypt';
 export class UsersService {
   constructor(private prisma: PrismaService) {}
 
-  async findAll() {
-    return this.prisma.user.findMany({
-      select: {
-        id: true,
-        email: true,
-        nickname: true,
-        role: true,
-        createdAt: true,
-      },
-      orderBy: { createdAt: 'desc' },
-    });
+  async findAll(page = 1, limit = 30) {
+    const skip = (page - 1) * limit;
+    const [users, total] = await Promise.all([
+      this.prisma.user.findMany({
+        select: {
+          id: true,
+          email: true,
+          nickname: true,
+          role: true,
+          createdAt: true,
+        },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take: limit,
+      }),
+      this.prisma.user.count(),
+    ]);
+    return { users, total, page, limit, totalPages: Math.ceil(total / limit) };
   }
 
   async getMe(userId: number) {
@@ -42,7 +49,7 @@ export class UsersService {
       }
     }
 
-    const data: any = {};
+    const data: { nickname?: string; email?: string; password?: string } = {};
     if (dto.nickname) data.nickname = dto.nickname;
     if (dto.email) data.email = dto.email;
     if (dto.password) data.password = await bcrypt.hash(dto.password, 10);

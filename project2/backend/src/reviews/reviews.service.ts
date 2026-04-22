@@ -33,19 +33,37 @@ export class ReviewsService {
     });
   }
 
-  async findByCourse(courseId: number) {
-    const reviews = await this.prisma.review.findMany({
+  async findByCourse(courseId: number, page = 1, limit = 20) {
+    const skip = (page - 1) * limit;
+
+    const [reviews, totalCount] = await Promise.all([
+      this.prisma.review.findMany({
+        where: { courseId },
+        include: { user: { select: { nickname: true, profileImageUrl: true } } },
+        orderBy: { createdAt: 'desc' },
+        skip,
+        take: limit,
+      }),
+      this.prisma.review.count({ where: { courseId } }),
+    ]);
+
+    const allRatings = await this.prisma.review.aggregate({
       where: { courseId },
-      include: { user: { select: { nickname: true, profileImageUrl: true } } },
-      orderBy: { createdAt: 'desc' },
+      _avg: { rating: true },
     });
 
-    const avgRating =
-      reviews.length > 0
-        ? Math.round((reviews.reduce((s, r) => s + r.rating, 0) / reviews.length) * 10) / 10
-        : null;
+    const avgRating = allRatings._avg.rating
+      ? Math.round(allRatings._avg.rating * 10) / 10
+      : null;
 
-    return { reviews, avgRating, totalCount: reviews.length };
+    return {
+      reviews,
+      avgRating,
+      totalCount,
+      page,
+      limit,
+      totalPages: Math.ceil(totalCount / limit),
+    };
   }
 
   async update(userId: number, reviewId: number, dto: UpdateReviewDto) {

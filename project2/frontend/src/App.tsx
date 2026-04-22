@@ -15,6 +15,7 @@ import AdminCategories from './pages/Admin/Categories';
 import AdminUsers from './pages/Admin/Users';
 import AdminReviews from './pages/Admin/Reviews';
 import InstructorPage from './pages/Instructor';
+import ProtectedRoute from './components/ProtectedRoute';
 import { useAuthStore } from './store/authStore';
 import api from './api/axios';
 
@@ -52,7 +53,14 @@ export default function App() {
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/instructor" element={<InstructorPage />} />
-            <Route path="/admin" element={<AdminLayout />}>
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute requiredRole="ADMIN">
+                  <AdminLayout />
+                </ProtectedRoute>
+              }
+            >
               <Route index element={<Navigate to="/admin/reviews" replace />} />
               <Route path="reviews" element={<AdminReviews />} />
               <Route path="courses" element={<AdminCourses />} />

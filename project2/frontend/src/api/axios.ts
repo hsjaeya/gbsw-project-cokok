@@ -30,9 +30,10 @@ api.interceptors.response.use(
         useAuthStore.getState().setAccessToken(newToken);
         originalRequest.headers.Authorization = `Bearer ${newToken}`;
         return api(originalRequest);
-      } catch {
+      } catch (refreshError) {
         useAuthStore.getState().logout();
         window.location.href = '/login';
+        return Promise.reject(refreshError);
       }
     }
     return Promise.reject(error);

@@ -22,6 +22,23 @@ export interface User {
   nickname: string;
   role: Role;
   profileImageUrl?: string | null;
+  createdAt?: string;
+}
+
+export interface UserListItem {
+  id: number;
+  email: string;
+  nickname: string;
+  role: Role;
+  createdAt: string;
+}
+
+export interface UsersResponse {
+  users: UserListItem[];
+  total: number;
+  page: number;
+  limit: number;
+  totalPages: number;
 }
 
 export const ROLE_LABELS: Record<Role, string> = {
@@ -65,6 +82,9 @@ export interface ReviewsResponse {
   reviews: Review[];
   avgRating: number | null;
   totalCount: number;
+  page: number;
+  limit: number;
+  totalPages: number;
 }
 
 export interface Course {

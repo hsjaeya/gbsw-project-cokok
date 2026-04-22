@@ -1,8 +1,10 @@
 import api from './axios';
-import type { User, Course, CourseStatus } from '../types';
+import type { UsersResponse, Course, CourseStatus } from '../types';
 
-export const getUsers = () =>
-  api.get<{ data: User[] }>('/admin/users').then((r) => r.data.data);
+export const getUsers = (page = 1, limit = 30) =>
+  api
+    .get<{ data: UsersResponse }>('/admin/users', { params: { page, limit } })
+    .then((r) => r.data.data);
 
 export const getAdminCourses = (status?: CourseStatus) =>
   api

@@ -9,16 +9,10 @@ export class EnrollmentsService {
     const course = await this.prisma.course.findUnique({ where: { id: courseId } });
     if (!course) throw new NotFoundException('Course not found');
 
-    const existing = await this.prisma.enrollment.findUnique({
+    const enrollment = await this.prisma.enrollment.upsert({
       where: { userId_courseId: { userId, courseId } },
-    });
-
-    if (existing) {
-      return { enrollmentId: existing.id, courseId };
-    }
-
-    const enrollment = await this.prisma.enrollment.create({
-      data: { userId, courseId },
+      create: { userId, courseId },
+      update: {},
     });
 
     return { enrollmentId: enrollment.id, courseId };

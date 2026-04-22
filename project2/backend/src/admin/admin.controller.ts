@@ -7,6 +7,7 @@ import {
   ParseIntPipe,
   Query,
   UseGuards,
+  DefaultValuePipe,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth, ApiQuery } from '@nestjs/swagger';
 import { CourseStatus, Role } from '@prisma/client';
@@ -30,8 +31,11 @@ export class AdminController {
 
   @Get('users')
   @ApiOperation({ summary: '전체 회원 목록 조회 (관리자)' })
-  getUsers() {
-    return this.usersService.findAll();
+  getUsers(
+    @Query('page', new DefaultValuePipe(1), ParseIntPipe) page: number,
+    @Query('limit', new DefaultValuePipe(30), ParseIntPipe) limit: number,
+  ) {
+    return this.usersService.findAll(page, limit);
   }
 
   @Get('courses')

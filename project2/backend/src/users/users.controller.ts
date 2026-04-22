@@ -16,6 +16,7 @@ import { UsersService } from './users.service';
 import { UpdateProfileDto } from './dto/update-profile.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
+import type { AuthUser } from '../common/interfaces/auth-user.interface';
 
 const avatarStorage = diskStorage({
   destination: './uploads/avatars',
@@ -34,7 +35,7 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @ApiOperation({ summary: '내 프로필 조회' })
-  getMe(@CurrentUser() user: any) {
+  getMe(@CurrentUser() user: AuthUser) {
     return this.usersService.getMe(user.id);
   }
 
@@ -42,7 +43,7 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @ApiOperation({ summary: '프로필 수정 (이름, 이메일, 비밀번호)' })
-  updateProfile(@CurrentUser() user: any, @Body() dto: UpdateProfileDto) {
+  updateProfile(@CurrentUser() user: AuthUser, @Body() dto: UpdateProfileDto) {
     return this.usersService.updateProfile(user.id, dto);
   }
 
@@ -52,7 +53,7 @@ export class UsersController {
   @ApiConsumes('multipart/form-data')
   @ApiOperation({ summary: '프로필 이미지 업로드' })
   @UseInterceptors(FileInterceptor('avatar', { storage: avatarStorage }))
-  uploadAvatar(@CurrentUser() user: any, @UploadedFile() file: Express.Multer.File) {
+  uploadAvatar(@CurrentUser() user: AuthUser, @UploadedFile() file: Express.Multer.File) {
     const url = `${process.env.BACKEND_URL || 'http://localhost:3000'}/uploads/avatars/${file.filename}`;
     return this.usersService.updateAvatar(user.id, url);
   }

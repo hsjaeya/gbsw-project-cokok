@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateLectureDto } from './dto/create-lecture.dto';
 import { UpdateLectureDto } from './dto/update-lecture.dto';
@@ -11,7 +11,7 @@ function parseYoutubeVideoId(url: string): string {
     const match = url.match(pattern);
     if (match) return match[1];
   }
-  return url;
+  throw new BadRequestException('유효한 YouTube URL이 아닙니다.');
 }
 
 @Injectable()
@@ -44,7 +44,7 @@ export class LecturesService {
     if (!lecture) throw new NotFoundException('Lecture not found');
 
     const { youtubeUrl, ...rest } = dto;
-    const data: any = { ...rest };
+    const data: Record<string, unknown> = { ...rest };
     if (youtubeUrl) {
       data.youtubeVideoId = parseYoutubeVideoId(youtubeUrl);
     }
