@@ -17,9 +17,9 @@
 
 | 표기 | 설명 |
 |------|------|
-| 🔓 Public | 인증 불필요 |
-| 🔐 Auth | 로그인 필요 (STUDENT 이상) |
-| 🛡 Admin | 관리자 권한 필요 |
+| Public | 인증 불필요 |
+| Auth | 로그인 필요 (STUDENT 이상) |
+| Admin | 관리자 권한 필요 |
 
 ---
 
@@ -27,10 +27,10 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/auth/register` | 🔓 | 회원가입 |
-| POST | `/auth/login` | 🔓 | 로그인 |
-| POST | `/auth/logout` | 🔐 | 로그아웃 |
-| POST | `/auth/refresh` | 🔓 | Access Token 재발급 |
+| POST | `/auth/register` | Public| 회원가입 |
+| POST | `/auth/login` | Public| 로그인 |
+| POST | `/auth/logout` | Auth| 로그아웃 |
+| POST | `/auth/refresh` | Public| Access Token 재발급 |
 
 ### POST `/auth/register`
 
@@ -68,10 +68,10 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| GET | `/categories` | 🔓 | 목록 조회 |
-| POST | `/categories` | 🛡 | 생성 |
-| PATCH | `/categories/:id` | 🛡 | 수정 |
-| DELETE | `/categories/:id` | 🛡 | 삭제 |
+| GET | `/categories` | Public| 목록 조회 |
+| POST | `/categories` | Admin| 생성 |
+| PATCH | `/categories/:id` | Admin| 수정 |
+| DELETE | `/categories/:id` | Admin| 삭제 |
 
 ---
 
@@ -79,11 +79,11 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| GET | `/courses` | 🔓 | 목록 조회 (필터/검색/페이지네이션) |
-| GET | `/courses/:id` | 🔓 | 상세 조회 (섹션/강의 단위 포함) |
-| POST | `/courses` | 🛡 | 강의 생성 |
-| PATCH | `/courses/:id` | 🛡 | 강의 수정 |
-| DELETE | `/courses/:id` | 🛡 | 강의 삭제 |
+| GET | `/courses` | Public| 목록 조회 (필터/검색/페이지네이션) |
+| GET | `/courses/:id` | Public| 상세 조회 (섹션/강의 단위 포함) |
+| POST | `/courses` | Admin| 강의 생성 |
+| PATCH | `/courses/:id` | Admin| 강의 수정 |
+| DELETE | `/courses/:id` | Admin| 강의 삭제 |
 
 ### GET `/courses` 쿼리 파라미터
 
@@ -128,9 +128,9 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/courses/:courseId/sections` | 🛡 | 섹션 생성 |
-| PATCH | `/courses/:courseId/sections/:id` | 🛡 | 섹션 수정 |
-| DELETE | `/courses/:courseId/sections/:id` | 🛡 | 섹션 삭제 |
+| POST | `/courses/:courseId/sections` | Admin| 섹션 생성 |
+| PATCH | `/courses/:courseId/sections/:id` | Admin| 섹션 수정 |
+| DELETE | `/courses/:courseId/sections/:id` | Admin| 섹션 삭제 |
 
 ### POST `/courses/:courseId/sections`
 
@@ -145,10 +145,10 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/sections/:sectionId/lectures` | 🛡 | 강의 단위 생성 |
-| PATCH | `/sections/:sectionId/lectures/:id` | 🛡 | 강의 단위 수정 |
-| DELETE | `/sections/:sectionId/lectures/:id` | 🛡 | 강의 단위 삭제 |
-| GET | `/lectures/:id` | 🔐 | 강의 단위 조회 (수강자 전용) |
+| POST | `/sections/:sectionId/lectures` | Admin| 강의 단위 생성 |
+| PATCH | `/sections/:sectionId/lectures/:id` | Admin| 강의 단위 수정 |
+| DELETE | `/sections/:sectionId/lectures/:id` | Admin| 강의 단위 삭제 |
+| GET | `/lectures/:id` | Auth| 강의 단위 조회 (수강자 전용) |
 
 ### POST `/sections/:sectionId/lectures`
 
@@ -163,7 +163,7 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/enrollments/auto` | 🔐 | 강의 시청 페이지 첫 진입 시 자동 호출, 이미 존재하면 무시 |
+| POST | `/enrollments/auto` | Auth| 강의 시청 페이지 첫 진입 시 자동 호출, 이미 존재하면 무시 |
 
 ### POST `/enrollments/auto`
 
@@ -183,8 +183,8 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/progress/complete` | 🔐 | 강의 단위 완료 처리 |
-| GET | `/progress/course/:courseId` | 🔐 | 강의 진도 조회 |
+| POST | `/progress/complete` | Auth| 강의 단위 완료 처리 |
+| GET | `/progress/course/:courseId` | Auth| 강의 진도 조회 |
 
 ### POST `/progress/complete`
 
@@ -217,7 +217,7 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| GET | `/enrollments/me` | 🔐 | 내 수강 강의 목록 및 진도율 |
+| GET | `/enrollments/me` | Auth| 내 수강 강의 목록 및 진도율 |
 
 ### GET `/enrollments/me` Response
 
@@ -236,9 +236,9 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| GET | `/admin/users` | 🛡 | 전체 회원 목록 조회 |
+| GET | `/admin/users` | Admin| 전체 회원 목록 조회 |
 
-> 강의/섹션/강의 단위/카테고리 관리는 위 3~5번 항목의 🛡 엔드포인트와 동일하게 사용합니다.
+> 강의/섹션/강의 단위/카테고리 관리는 위 3~5번 항목의 Admin 엔드포인트와 동일하게 사용합니다.
 
 ---
 

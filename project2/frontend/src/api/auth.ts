@@ -11,3 +11,4 @@ export const logout = () => api.post('/auth/logout');
 
 export const refreshToken = () =>
   api.post<{ data: { accessToken: string } }>('/auth/refresh').then((r) => r.data.data);
+

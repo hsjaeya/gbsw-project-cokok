@@ -8,19 +8,23 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
+import { Throttle } from '@nestjs/throttler';
 import type { Response, Request } from 'express';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
+import { ThrottlerBehindProxyGuard } from '../common/guards/throttler-behind-proxy.guard';
 
 @ApiTags('Auth')
 @Controller('auth')
+@UseGuards(ThrottlerBehindProxyGuard)
 export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('register')
+  @Throttle({ default: { ttl: 3600000, limit: 5 } })
   @ApiOperation({ summary: '회원가입' })
   async register(@Body() dto: RegisterDto) {
     return this.authService.register(dto);
@@ -28,6 +32,7 @@ export class AuthController {
 
   @Post('login')
   @HttpCode(200)
+  @Throttle({ default: { ttl: 60000, limit: 10 } })
   @ApiOperation({ summary: '로그인' })
   async login(
     @Body() dto: LoginDto,
@@ -64,4 +69,5 @@ export class AuthController {
     const refreshToken = (req.cookies as Record<string, string>)['refreshToken'];
     return this.authService.refresh(refreshToken);
   }
+
 }

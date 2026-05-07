@@ -27,19 +27,18 @@ enum Level {
 }
 
 model User {
-  id                Int          @id @default(autoincrement())
-  email             String       @unique
-  password          String
-  nickname          String
-  role              Role         @default(STUDENT)
-  refreshToken      String?
-  profileImageUrl   String?
-  createdAt         DateTime     @default(now())
-  updatedAt         DateTime     @updatedAt
-  enrollments       Enrollment[]
-  reviews           Review[]
-  instructorCourses Course[]     @relation("InstructorCourses")
-
+  id                   Int                   @id @default(autoincrement())
+  email                String                @unique
+  password             String
+  nickname             String
+  role                 Role                  @default(STUDENT)
+  refreshToken         String?
+  profileImageUrl      String?
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+  enrollments          Enrollment[]
+  reviews              Review[]
+  instructorCourses    Course[]              @relation("InstructorCourses")
   @@map("users")
 }
 
