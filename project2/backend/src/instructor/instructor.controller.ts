@@ -11,7 +11,10 @@ import {
   HttpCode,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
+import { Role } from '@prisma/client';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../common/guards/roles.guard';
+import { Roles } from '../common/decorators/roles.decorator';
 import { CurrentUser } from '../common/decorators/current-user.decorator';
 import { InstructorService } from './instructor.service';
 import { CreateInstructorCourseDto } from './dto/create-instructor-course.dto';
@@ -19,7 +22,8 @@ import { UpdateInstructorCourseDto } from './dto/update-instructor-course.dto';
 
 @ApiTags('Instructor')
 @Controller('instructor')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(Role.INSTRUCTOR, Role.ADMIN)
 @ApiBearerAuth()
 export class InstructorController {
   constructor(private instructorService: InstructorService) {}

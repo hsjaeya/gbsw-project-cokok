@@ -20,7 +20,8 @@ import { Role } from '@prisma/client';
 
 @ApiTags('Sections')
 @Controller('courses/:courseId/sections')
-@UseGuards(JwtAuthGuard)
+@UseGuards(JwtAuthGuard, RolesGuard)
+@Roles(Role.INSTRUCTOR, Role.ADMIN)
 @ApiBearerAuth()
 export class SectionsController {
   constructor(private sectionsService: SectionsService) {}

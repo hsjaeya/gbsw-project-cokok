@@ -111,6 +111,9 @@
 |--------|------|------|------|
 | GET | `/courses` | Public| 목록 조회 (APPROVED만 노출, 필터/검색/페이지네이션) |
 | GET | `/courses/:id` | Public| 상세 조회 (섹션/강의 단위 포함) |
+| POST | `/courses` | Admin| 강의 직접 생성 |
+| PATCH | `/courses/:id` | Admin| 강의 수정 |
+| DELETE | `/courses/:id` | Admin| 강의 삭제 |
 
 ### GET `/courses` 쿼리 파라미터
 
