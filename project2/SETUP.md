@@ -26,7 +26,7 @@ CREATE DATABASE cokok OWNER postgres;
 zip 파일에 포함된 `.env` 파일들을 아래 위치에 복사합니다.
 
 ```
-project1/
+project2/
 ├── backend/.env     ← backend_env.env 를 여기에 .env 로 저장
 └── frontend/.env    ← frontend_env.env 를 여기에 .env 로 저장
 ```
