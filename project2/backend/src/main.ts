@@ -31,7 +31,7 @@ async function bootstrap() {
   app.useGlobalInterceptors(new ResponseInterceptor());
 
   app.enableCors({
-    origin: ['http://localhost:5173'],
+    origin: true,
     credentials: true,
   });
 
