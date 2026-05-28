@@ -106,8 +106,8 @@ model Enrollment {
   id              Int               @id @default(autoincrement())
   userId          Int
   courseId        Int
-  user            User              @relation(fields: [userId], references: [id])
-  course          Course            @relation(fields: [courseId], references: [id])
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course          Course            @relation(fields: [courseId], references: [id], onDelete: Cascade)
   createdAt       DateTime          @default(now())
   updatedAt       DateTime          @updatedAt
   lectureProgress LectureProgress[]

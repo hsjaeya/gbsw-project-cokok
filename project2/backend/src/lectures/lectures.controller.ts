@@ -15,9 +15,6 @@ import { LecturesService } from './lectures.service';
 import { CreateLectureDto } from './dto/create-lecture.dto';
 import { UpdateLectureDto } from './dto/update-lecture.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { RolesGuard } from '../common/guards/roles.guard';
-import { Roles } from '../common/decorators/roles.decorator';
-import { Role } from '@prisma/client';
 
 @ApiTags('Lectures')
 @Controller()
@@ -25,10 +22,9 @@ export class LecturesController {
   constructor(private lecturesService: LecturesService) {}
 
   @Post('sections/:sectionId/lectures')
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(Role.INSTRUCTOR, Role.ADMIN)
+  @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
-  @ApiOperation({ summary: '강의 단위 생성 (강사)' })
+  @ApiOperation({ summary: '강의 단위 생성' })
   create(
     @Param('sectionId', ParseIntPipe) sectionId: number,
     @Body() dto: CreateLectureDto,
@@ -45,10 +41,9 @@ export class LecturesController {
   }
 
   @Patch('sections/:sectionId/lectures/:id')
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(Role.INSTRUCTOR, Role.ADMIN)
+  @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
-  @ApiOperation({ summary: '강의 단위 수정 (강사)' })
+  @ApiOperation({ summary: '강의 단위 수정' })
   update(
     @Param('sectionId', ParseIntPipe) sectionId: number,
     @Param('id', ParseIntPipe) id: number,
@@ -58,11 +53,10 @@ export class LecturesController {
   }
 
   @Delete('sections/:sectionId/lectures/:id')
-  @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(Role.INSTRUCTOR, Role.ADMIN)
+  @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @HttpCode(200)
-  @ApiOperation({ summary: '강의 단위 삭제 (강사)' })
+  @ApiOperation({ summary: '강의 단위 삭제' })
   remove(
     @Param('sectionId', ParseIntPipe) sectionId: number,
     @Param('id', ParseIntPipe) id: number,

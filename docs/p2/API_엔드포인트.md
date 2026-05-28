@@ -152,9 +152,9 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/courses/:courseId/sections` | Instructor| 섹션 생성 |
-| PATCH | `/courses/:courseId/sections/:id` | Instructor| 섹션 수정 |
-| DELETE | `/courses/:courseId/sections/:id` | Instructor| 섹션 삭제 |
+| POST | `/courses/:courseId/sections` | Auth| 섹션 생성 |
+| PATCH | `/courses/:courseId/sections/:id` | Auth| 섹션 수정 |
+| DELETE | `/courses/:courseId/sections/:id` | Auth| 섹션 삭제 |
 
 ### POST `/courses/:courseId/sections`
 
@@ -169,9 +169,9 @@
 
 | 메서드 | 경로 | 권한 | 설명 |
 |--------|------|------|------|
-| POST | `/sections/:sectionId/lectures` | Instructor| 강의 단위 생성 |
-| PATCH | `/sections/:sectionId/lectures/:id` | Instructor| 강의 단위 수정 |
-| DELETE | `/sections/:sectionId/lectures/:id` | Instructor| 강의 단위 삭제 |
+| POST | `/sections/:sectionId/lectures` | Auth| 강의 단위 생성 |
+| PATCH | `/sections/:sectionId/lectures/:id` | Auth| 강의 단위 수정 |
+| DELETE | `/sections/:sectionId/lectures/:id` | Auth| 강의 단위 삭제 |
 | GET | `/lectures/:id` | Auth| 강의 단위 조회 |
 
 ### POST `/sections/:sectionId/lectures`

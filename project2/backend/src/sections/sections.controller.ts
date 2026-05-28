@@ -14,14 +14,10 @@ import { SectionsService } from './sections.service';
 import { CreateSectionDto } from './dto/create-section.dto';
 import { UpdateSectionDto } from './dto/update-section.dto';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { RolesGuard } from '../common/guards/roles.guard';
-import { Roles } from '../common/decorators/roles.decorator';
-import { Role } from '@prisma/client';
 
 @ApiTags('Sections')
 @Controller('courses/:courseId/sections')
-@UseGuards(JwtAuthGuard, RolesGuard)
-@Roles(Role.INSTRUCTOR, Role.ADMIN)
+@UseGuards(JwtAuthGuard)
 @ApiBearerAuth()
 export class SectionsController {
   constructor(private sectionsService: SectionsService) {}
