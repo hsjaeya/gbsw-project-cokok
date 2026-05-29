@@ -23,7 +23,7 @@ export class LecturesService {
     if (!section) throw new NotFoundException('Section not found');
 
     const { youtubeUrl, ...rest } = dto;
-    const youtubeVideoId = parseYoutubeVideoId(youtubeUrl);
+    const youtubeVideoId = parseYoutubeVideoId(youtubeUrl.trim());
 
     return this.prisma.lecture.create({
       data: { ...rest, youtubeVideoId, sectionId },
@@ -46,7 +46,7 @@ export class LecturesService {
     const { youtubeUrl, ...rest } = dto;
     const data: Record<string, unknown> = { ...rest };
     if (youtubeUrl) {
-      data.youtubeVideoId = parseYoutubeVideoId(youtubeUrl);
+      data.youtubeVideoId = parseYoutubeVideoId(youtubeUrl.trim());
     }
 
     return this.prisma.lecture.update({ where: { id }, data });
