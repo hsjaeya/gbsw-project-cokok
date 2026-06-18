@@ -8,6 +8,7 @@ export interface InstructorCoursePayload {
   level: Level;
   categoryId: number;
   price?: number;
+  instructorWebhookUrl?: string;
 }
 
 export const getMyCourses = () =>
