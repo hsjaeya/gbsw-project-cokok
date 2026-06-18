@@ -1,0 +1,245 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  STUDENT
+  INSTRUCTOR
+  ADMIN
+}
+
+enum CourseStatus {
+  DRAFT
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum Level {
+  BEGINNER
+  ELEMENTARY
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum SubscriptionType {
+  EMAIL
+  DISCORD
+}
+
+model User {
+  id                Int            @id @default(autoincrement())
+  email             String         @unique
+  password          String
+  nickname          String
+  role              Role           @default(STUDENT)
+  refreshToken      String?
+  profileImageUrl   String?
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+  enrollments       Enrollment[]
+  reviews           Review[]
+  instructorCourses Course[]       @relation("InstructorCourses")
+  payments          Payment[]
+  subscriptions     Subscription[]
+  auditLogs         AuditLog[]
+
+  @@map("users")
+}
+
+model Category {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  courses   Course[]
+
+  @@map("categories")
+}
+
+model Course {
+  id                  Int          @id @default(autoincrement())
+  title               String
+  description         String?
+  thumbnailUrl        String?
+  level               Level        @default(BEGINNER)
+  status              CourseStatus @default(DRAFT)
+  rejectionReason     String?
+  instructorWebhookUrl String?
+  price               Int          @default(0)
+  categoryId          Int
+  instructorId        Int?
+  category            Category     @relation(fields: [categoryId], references: [id])
+  instructor          User?        @relation("InstructorCourses", fields: [instructorId], references: [id])
+  createdAt           DateTime     @default(now())
+  updatedAt           DateTime     @updatedAt
+  sections            Section[]
+  enrollments         Enrollment[]
+  reviews             Review[]
+  payments            Payment[]
+  webhookLogs         WebhookLog[]
+
+  @@index([status, categoryId])
+  @@index([instructorId])
+  @@map("courses")
+}
+
+model Section {
+  id        Int       @id @default(autoincrement())
+  title     String
+  order     Int
+  courseId  Int
+  course    Course    @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  lectures  Lecture[]
+
+  @@map("sections")
+}
+
+model Lecture {
+  id              Int               @id @default(autoincrement())
+  title           String
+  youtubeVideoId  String
+  durationSeconds Int?
+  isPreview       Boolean           @default(false)
+  order           Int
+  sectionId       Int
+  section         Section           @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  lectureProgress LectureProgress[]
+
+  @@map("lectures")
+}
+
+model Enrollment {
+  id              Int               @id @default(autoincrement())
+  userId          Int
+  courseId        Int
+  user            User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course          Course            @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  lectureProgress LectureProgress[]
+
+  @@unique([userId, courseId])
+  @@index([userId])
+  @@map("enrollments")
+}
+
+model LectureProgress {
+  id           Int        @id @default(autoincrement())
+  enrollmentId Int
+  lectureId    Int
+  isCompleted  Boolean    @default(false)
+  completedAt  DateTime?
+  enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  lecture      Lecture    @relation(fields: [lectureId], references: [id], onDelete: Cascade)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  @@unique([enrollmentId, lectureId])
+  @@index([enrollmentId])
+  @@map("lecture_progress")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int
+  content   String?
+  userId    Int
+  courseId  Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, courseId])
+  @@map("reviews")
+}
+
+model Payment {
+  id          Int           @id @default(autoincrement())
+  orderId     String        @unique
+  paymentKey  String?       @unique
+  userId      Int
+  courseId    Int
+  amount      Int
+  status      PaymentStatus @default(PENDING)
+  paidAt      DateTime?
+  refundedAt  DateTime?
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  course      Course        @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@map("payments")
+}
+
+model Subscription {
+  id                 Int              @id @default(autoincrement())
+  type               SubscriptionType
+  email              String?
+  discordWebhookUrl  String?
+  userId             Int?
+  isActive           Boolean          @default(true)
+  user               User?            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
+
+  @@map("subscriptions")
+}
+
+model WebhookLog {
+  id          Int      @id @default(autoincrement())
+  targetUrl   String
+  payload     Json
+  statusCode  Int?
+  isSuccess   Boolean  @default(false)
+  retryCount  Int      @default(0)
+  responseMs  Int?
+  courseId    Int?
+  course      Course?  @relation(fields: [courseId], references: [id])
+  createdAt   DateTime @default(now())
+
+  @@map("webhook_logs")
+}
+
+model AuditLog {
+  id         Int      @id @default(autoincrement())
+  adminId    Int
+  action     String
+  targetType String
+  targetId   Int?
+  detail     Json?
+  admin      User     @relation(fields: [adminId], references: [id])
+  createdAt  DateTime @default(now())
+
+  @@map("audit_logs")
+}
+
+model SystemLog {
+  id         Int      @id @default(autoincrement())
+  level      String
+  method     String?
+  url        String?
+  statusCode Int?
+  durationMs Int?
+  userId     Int?
+  message    String?
+  createdAt  DateTime @default(now())
+
+  @@map("system_logs")
+}

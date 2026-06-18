@@ -1,0 +1,861 @@
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T06:54:40.217Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T06:54:40.238Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T06:54:40.239Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T06:54:40.239Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T06:54:40.240Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T06:54:40.240Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T06:54:40.240Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T06:54:40.241Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T06:54:40.241Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T06:54:40.241Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T06:54:40.241Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T06:54:40.241Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T06:54:40.243Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T06:54:40.243Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T06:54:40.243Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T06:54:40.243Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T06:54:40.243Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T06:54:40.244Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T06:54:40.245Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T06:54:40.245Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T06:54:40.245Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T06:54:40.245Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T06:54:40.245Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T06:54:40.246Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T06:54:40.247Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T06:54:40.268Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T06:54:40.269Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T06:54:40.270Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T06:54:40.270Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T06:54:40.270Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T06:54:40.270Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T06:54:40.271Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T06:54:40.271Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T06:54:40.271Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T06:54:40.271Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T06:54:40.272Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T06:54:40.272Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T06:54:40.272Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T06:54:40.273Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T06:54:40.273Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T06:54:40.274Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T06:54:40.274Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T06:54:40.274Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T06:54:40.274Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T06:54:40.275Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T06:54:40.275Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T06:54:40.275Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T06:54:40.276Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T06:54:40.276Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T06:54:40.276Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T06:54:40.276Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T06:54:40.277Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T06:54:40.277Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T06:54:40.277Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T06:54:40.277Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T06:54:40.277Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T06:54:40.277Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T06:54:40.278Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T06:54:40.278Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T06:54:40.278Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T06:54:40.278Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T06:54:40.279Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T06:54:40.279Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T06:54:40.279Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T06:54:40.279Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T06:54:40.280Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T06:54:40.280Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T06:54:40.280Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T06:54:40.281Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T06:54:40.281Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T06:54:40.282Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T06:54:40.282Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T06:54:40.282Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T06:54:40.282Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T06:54:40.282Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T06:54:40.283Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T06:54:40.283Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T06:54:40.283Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T06:54:40.283Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T06:54:40.284Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T06:54:40.284Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T06:54:40.284Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T06:54:40.285Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T06:54:40.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T06:54:40.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T06:54:40.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T06:54:40.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T06:54:40.286Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T06:54:40.287Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T06:54:40.287Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T06:54:40.288Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T06:54:40.376Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T06:54:40.378Z"}
+{"context":"SchedulerService","level":"info","message":"Running log cleanup job","timestamp":"2026-06-17T18:01:21.593Z"}
+{"context":"SchedulerService","level":"info","message":"Deleted 0 old system logs","timestamp":"2026-06-17T18:01:21.979Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:14:09.716Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:14:09.777Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:14:09.779Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:14:09.780Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:14:09.785Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:14:09.786Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:14:09.788Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:14:09.789Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:14:09.795Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:14:09.797Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:14:09.801Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:14:09.803Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:14:09.817Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:14:09.817Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:14:09.818Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:14:09.819Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:14:09.820Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:14:09.822Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:14:09.834Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:14:09.835Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:14:09.835Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:14:09.835Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:14:09.837Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:14:09.839Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:14:09.840Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:14:09.841Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:14:09.842Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:14:09.843Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:14:09.844Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:14:09.846Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:14:09.848Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:14:09.967Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:14:09.976Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:14:09.978Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:14:09.981Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:14:09.981Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:14:09.982Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:14:09.983Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:14:09.984Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:14:09.991Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:14:09.992Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:14:09.994Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:14:09.997Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:14:10.001Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:14:10.002Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:14:10.003Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:14:10.006Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:14:10.007Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:14:10.008Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:14:10.010Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:14:10.011Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:14:10.011Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:14:10.012Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:14:10.013Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:14:10.014Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:14:10.015Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:14:10.016Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:14:10.017Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:14:10.018Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:14:10.020Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:14:10.022Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:14:10.023Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:14:10.024Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:14:10.025Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:14:10.026Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:14:10.027Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:14:10.028Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:14:10.030Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:14:10.031Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:14:10.032Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:14:10.033Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:14:10.035Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:14:10.036Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:14:10.038Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:14:10.040Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:14:10.042Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:14:10.043Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:14:10.045Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:14:10.046Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:14:10.047Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:14:10.048Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:14:10.050Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:14:10.051Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:14:10.053Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:14:10.054Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:14:10.054Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:14:10.055Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:14:10.056Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:14:10.056Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:14:10.057Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:14:10.057Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:14:10.058Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:14:10.059Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:14:10.060Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:14:10.062Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:14:10.063Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:14:10.064Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:14:10.065Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:14:10.065Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:14:10.066Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:14:10.067Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:14:10.068Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:14:10.071Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:14:10.072Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:14:10.074Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:14:10.255Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:14:10.266Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:22:17.372Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:22:17.427Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:22:17.428Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:22:17.429Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:22:17.431Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:22:17.431Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:22:17.432Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:22:17.433Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:22:17.434Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:22:17.435Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:22:17.437Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:22:17.439Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:22:17.445Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:22:17.445Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:22:17.446Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:22:17.446Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:22:17.446Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:22:17.448Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:22:17.452Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:22:17.453Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:22:17.453Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:22:17.454Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:22:17.454Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:22:17.455Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:22:17.455Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:22:17.455Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:22:17.455Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:22:17.456Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:22:17.456Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:22:17.456Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:22:17.456Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:22:17.526Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:22:17.531Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:22:17.533Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:22:17.534Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:22:17.534Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:22:17.535Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:22:17.535Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:22:17.536Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:22:17.537Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:22:17.537Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:22:17.538Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:22:17.538Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:22:17.539Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:22:17.540Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:22:17.540Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:22:17.541Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:22:17.543Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:22:17.544Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:22:17.545Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:22:17.545Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:22:17.546Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:22:17.547Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:22:17.547Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:22:17.547Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:22:17.548Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:22:17.548Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:22:17.549Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:22:17.550Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:22:17.551Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:22:17.551Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:22:17.552Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:22:17.552Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:22:17.552Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:22:17.553Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:22:17.553Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:22:17.553Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:22:17.554Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:22:17.554Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:22:17.555Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:22:17.556Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:22:17.560Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:22:17.560Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:22:17.561Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:22:17.562Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:22:17.562Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:22:17.563Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:22:17.564Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:22:17.564Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:22:17.565Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:22:17.565Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:22:17.566Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:22:17.567Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:22:17.568Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:22:17.568Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:22:17.568Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:22:17.569Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:22:17.569Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:22:17.569Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:22:17.570Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:22:17.570Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:22:17.571Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:22:17.571Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:22:17.572Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:22:17.573Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:22:17.573Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:22:17.574Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:22:17.575Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:22:17.575Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:22:17.576Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:22:17.576Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:22:17.576Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:22:17.578Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:22:17.579Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:22:17.581Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:22:17.708Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:22:17.714Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:37:37.583Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:37:37.624Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:37:37.625Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:37:37.626Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:37:37.628Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:37:37.629Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:37:37.629Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:37:37.630Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:37:37.630Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:37:37.631Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:37:37.631Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:37:37.631Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:37:37.635Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:37:37.636Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:37:37.636Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:37:37.636Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:37:37.636Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:37:37.637Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:37:37.641Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:37:37.641Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:37:37.641Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:37:37.641Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:37:37.642Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:37:37.642Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:37:37.642Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:37:37.642Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:37:37.643Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:37:37.643Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:37:37.643Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:37:37.643Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:37:37.643Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:37:37.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:37:37.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:37:37.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:37:37.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:37:37.696Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:37:37.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:37:37.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:37:37.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:37:37.698Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:37:37.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:37:37.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:37:37.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:37:37.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:37:37.702Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:37:37.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:37:37.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:37:37.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:37:37.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:37:37.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:37:37.705Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:37:37.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:37:37.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:37:37.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:37:37.706Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:37:37.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:37:37.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:37:37.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:37:37.709Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:37:37.709Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:37:37.710Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:37:37.710Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:37:37.711Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:37:37.711Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:37:37.711Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:37:37.711Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:37:37.712Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:37:37.712Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:37:37.713Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:37:37.713Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:37:37.714Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:37:37.715Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:37:37.715Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:37:37.716Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:37:37.716Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:37:37.717Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:37:37.718Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:37:37.718Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:37:37.719Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:37:37.719Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:37:37.719Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:37:37.720Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:37:37.720Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:37:37.720Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:37:37.721Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:37:37.721Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:37:37.721Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:37:37.721Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:37:37.722Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:37:37.722Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:37:37.722Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:37:37.722Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:37:37.722Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:37:37.723Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:37:37.724Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:37:37.724Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:37:37.725Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:37:37.725Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:37:37.725Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:37:37.726Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:37:37.726Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:37:37.727Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:37:37.727Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:37:37.727Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:37:37.729Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:37:37.875Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:37:37.887Z"}
+{"context":"NotificationsService","level":"error","message":"Email send failed to errcoe503@gmail.com: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-37c521ae7dcsm8841208a91.2 - gsmtp","stack":[null],"timestamp":"2026-06-17T23:45:52.097Z"}
+{"context":"NotificationsService","level":"error","message":"Email send failed to errcode503@gmail.com: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-2c432c8c1f9sm179660285ad.59 - gsmtp","stack":[null],"timestamp":"2026-06-17T23:45:53.514Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:48:43.993Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:48:44.037Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:48:44.039Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:48:44.039Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:48:44.041Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:48:44.042Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:48:44.043Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:48:44.043Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:48:44.044Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:48:44.045Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:48:44.045Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:48:44.046Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:48:44.049Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:48:44.050Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:48:44.051Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:48:44.051Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:48:44.052Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:48:44.052Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:48:44.055Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:48:44.056Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:48:44.056Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:48:44.057Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:48:44.057Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:48:44.057Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:48:44.058Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:48:44.059Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:48:44.059Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:48:44.059Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:48:44.060Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:48:44.060Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:48:44.060Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:48:44.112Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:48:44.115Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:48:44.116Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:48:44.117Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:48:44.118Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:48:44.119Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:48:44.120Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:48:44.121Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:48:44.122Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:48:44.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:48:44.122Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:48:44.123Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:48:44.125Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:48:44.126Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:48:44.127Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:48:44.128Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:48:44.129Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:48:44.131Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:48:44.132Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:48:44.132Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:48:44.133Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:48:44.133Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:48:44.134Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:48:44.135Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:48:44.135Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:48:44.136Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:48:44.136Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:48:44.137Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:48:44.137Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:48:44.138Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:48:44.138Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:48:44.139Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:48:44.139Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:48:44.140Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:48:44.140Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:48:44.140Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:48:44.141Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:48:44.141Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:48:44.142Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:48:44.143Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:48:44.143Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:48:44.144Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:48:44.144Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:48:44.145Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:48:44.145Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:48:44.145Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:48:44.146Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:48:44.146Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:48:44.146Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:48:44.147Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:48:44.148Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:48:44.149Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:48:44.150Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:48:44.150Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:48:44.151Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:48:44.152Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:48:44.152Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:48:44.152Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:48:44.153Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:48:44.153Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:48:44.153Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:48:44.154Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:48:44.154Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:48:44.155Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:48:44.156Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:48:44.157Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:48:44.157Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:48:44.158Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:48:44.159Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:48:44.159Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:48:44.160Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:48:44.160Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:48:44.161Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:48:44.161Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:48:44.285Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:48:44.290Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:51:41.688Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:51:41.727Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:51:41.729Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:51:41.729Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:51:41.734Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:51:41.734Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:51:41.735Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:51:41.735Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:51:41.736Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:51:41.737Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:51:41.737Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:51:41.737Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:51:41.741Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:51:41.741Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:51:41.742Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:51:41.742Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:51:41.742Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:51:41.743Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:51:41.745Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:51:41.745Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:51:41.746Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:51:41.746Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:51:41.746Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:51:41.746Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:51:41.747Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:51:41.747Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:51:41.747Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:51:41.747Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:51:41.747Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:51:41.748Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:51:41.748Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:51:41.791Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:51:41.794Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:51:41.795Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:51:41.796Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:51:41.796Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:51:41.796Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:51:41.797Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:51:41.798Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:51:41.799Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:51:41.799Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:51:41.799Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:51:41.800Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:51:41.801Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:51:41.802Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:51:41.803Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:51:41.804Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:51:41.804Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:51:41.805Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:51:41.805Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:51:41.805Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:51:41.806Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:51:41.806Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:51:41.807Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:51:41.810Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:51:41.810Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:51:41.813Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:51:41.813Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:51:41.814Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:51:41.815Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:51:41.816Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:51:41.818Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:51:41.819Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:51:41.824Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:51:41.838Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:51:41.840Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:51:41.841Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:51:41.843Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:51:41.845Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:51:41.846Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:51:41.847Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:51:41.847Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:51:41.848Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:51:41.849Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:51:41.850Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:51:41.850Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:51:41.851Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:51:41.851Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:51:41.851Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:51:41.853Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:51:41.854Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:51:41.855Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:51:41.855Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:51:41.856Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:51:41.857Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:51:41.857Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:51:41.857Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:51:41.858Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:51:41.859Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:51:41.859Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:51:41.860Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:51:41.860Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:51:41.860Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:51:41.863Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:51:41.865Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:51:41.866Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:51:41.866Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:51:41.866Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:51:41.867Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:51:41.868Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:51:41.868Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:51:41.869Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:51:41.870Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:51:41.871Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:51:41.873Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:51:41.995Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:51:41.999Z"}
+{"context":"NotificationsService","level":"error","message":"Email send failed to errcoe503@gmail.com: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-8434ad03fdcsm16746046b3a.24 - gsmtp","stack":[null],"timestamp":"2026-06-17T23:54:07.293Z"}
+{"context":"NotificationsService","level":"error","message":"Email send failed to errcode503@gmail.com: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to\n535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-8434b04808dsm17283486b3a.52 - gsmtp","stack":[null],"timestamp":"2026-06-17T23:54:08.538Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:54:53.438Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:54:53.491Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:54:53.494Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:54:53.496Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:54:53.499Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:54:53.500Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:54:53.501Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:54:53.502Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:54:53.503Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:54:53.504Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:54:53.504Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:54:53.505Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:54:53.515Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:54:53.517Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:54:53.519Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:54:53.520Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:54:53.522Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:54:53.526Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:54:53.530Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:54:53.531Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:54:53.532Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:54:53.532Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:54:53.532Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:54:53.533Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:54:53.533Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:54:53.534Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:54:53.535Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:54:53.536Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:54:53.537Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:54:53.539Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:54:53.539Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:54:53.654Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:54:53.659Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:54:53.660Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:54:53.662Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:54:53.663Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:54:53.663Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:54:53.664Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:54:53.668Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:54:53.670Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:54:53.670Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:54:53.672Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:54:53.673Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:54:53.675Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:54:53.676Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:54:53.677Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:54:53.678Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:54:53.678Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:54:53.679Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:54:53.680Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:54:53.680Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:54:53.681Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:54:53.682Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:54:53.682Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:54:53.684Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:54:53.685Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:54:53.686Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:54:53.687Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:54:53.688Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:54:53.689Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:54:53.689Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:54:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:54:53.690Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:54:53.690Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:54:53.691Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:54:53.692Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:54:53.692Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:54:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:54:53.693Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:54:53.694Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:54:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:54:53.695Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:54:53.696Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:54:53.697Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:54:53.698Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:54:53.699Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:54:53.700Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:54:53.700Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:54:53.701Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:54:53.702Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:54:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:54:53.703Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:54:53.704Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:54:53.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:54:53.705Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:54:53.705Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:54:53.706Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:54:53.707Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:54:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:54:53.708Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:54:53.709Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:54:53.709Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:54:53.710Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:54:53.711Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:54:53.712Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:54:53.712Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:54:53.713Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:54:53.713Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:54:53.714Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:54:53.714Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:54:53.715Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:54:53.715Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:54:53.716Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:54:53.717Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:54:53.718Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:54:53.833Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:54:53.838Z"}
+{"context":"NestFactory","level":"info","message":"Starting Nest application...","timestamp":"2026-06-17T23:56:30.301Z"}
+{"context":"InstanceLoader","level":"info","message":"AppModule dependencies initialized","timestamp":"2026-06-17T23:56:30.339Z"}
+{"context":"InstanceLoader","level":"info","message":"PrismaModule dependencies initialized","timestamp":"2026-06-17T23:56:30.340Z"}
+{"context":"InstanceLoader","level":"info","message":"PassportModule dependencies initialized","timestamp":"2026-06-17T23:56:30.340Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigHostModule dependencies initialized","timestamp":"2026-06-17T23:56:30.342Z"}
+{"context":"InstanceLoader","level":"info","message":"ThrottlerModule dependencies initialized","timestamp":"2026-06-17T23:56:30.342Z"}
+{"context":"InstanceLoader","level":"info","message":"JwtModule dependencies initialized","timestamp":"2026-06-17T23:56:30.343Z"}
+{"context":"InstanceLoader","level":"info","message":"HttpModule dependencies initialized","timestamp":"2026-06-17T23:56:30.343Z"}
+{"context":"InstanceLoader","level":"info","message":"DiscoveryModule dependencies initialized","timestamp":"2026-06-17T23:56:30.343Z"}
+{"context":"InstanceLoader","level":"info","message":"AuditModule dependencies initialized","timestamp":"2026-06-17T23:56:30.344Z"}
+{"context":"InstanceLoader","level":"info","message":"NotificationsModule dependencies initialized","timestamp":"2026-06-17T23:56:30.344Z"}
+{"context":"InstanceLoader","level":"info","message":"WebhooksModule dependencies initialized","timestamp":"2026-06-17T23:56:30.344Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:56:30.347Z"}
+{"context":"InstanceLoader","level":"info","message":"ConfigModule dependencies initialized","timestamp":"2026-06-17T23:56:30.347Z"}
+{"context":"InstanceLoader","level":"info","message":"SchedulerModule dependencies initialized","timestamp":"2026-06-17T23:56:30.347Z"}
+{"context":"InstanceLoader","level":"info","message":"ScheduleModule dependencies initialized","timestamp":"2026-06-17T23:56:30.347Z"}
+{"context":"InstanceLoader","level":"info","message":"TerminusModule dependencies initialized","timestamp":"2026-06-17T23:56:30.348Z"}
+{"context":"InstanceLoader","level":"info","message":"HealthModule dependencies initialized","timestamp":"2026-06-17T23:56:30.349Z"}
+{"context":"InstanceLoader","level":"info","message":"SubscriptionsModule dependencies initialized","timestamp":"2026-06-17T23:56:30.351Z"}
+{"context":"InstanceLoader","level":"info","message":"UsersModule dependencies initialized","timestamp":"2026-06-17T23:56:30.352Z"}
+{"context":"InstanceLoader","level":"info","message":"CategoriesModule dependencies initialized","timestamp":"2026-06-17T23:56:30.352Z"}
+{"context":"InstanceLoader","level":"info","message":"CoursesModule dependencies initialized","timestamp":"2026-06-17T23:56:30.353Z"}
+{"context":"InstanceLoader","level":"info","message":"SectionsModule dependencies initialized","timestamp":"2026-06-17T23:56:30.353Z"}
+{"context":"InstanceLoader","level":"info","message":"LecturesModule dependencies initialized","timestamp":"2026-06-17T23:56:30.354Z"}
+{"context":"InstanceLoader","level":"info","message":"EnrollmentsModule dependencies initialized","timestamp":"2026-06-17T23:56:30.354Z"}
+{"context":"InstanceLoader","level":"info","message":"ProgressModule dependencies initialized","timestamp":"2026-06-17T23:56:30.355Z"}
+{"context":"InstanceLoader","level":"info","message":"ReviewsModule dependencies initialized","timestamp":"2026-06-17T23:56:30.355Z"}
+{"context":"InstanceLoader","level":"info","message":"InstructorModule dependencies initialized","timestamp":"2026-06-17T23:56:30.355Z"}
+{"context":"InstanceLoader","level":"info","message":"AdminModule dependencies initialized","timestamp":"2026-06-17T23:56:30.355Z"}
+{"context":"InstanceLoader","level":"info","message":"AuthModule dependencies initialized","timestamp":"2026-06-17T23:56:30.356Z"}
+{"context":"InstanceLoader","level":"info","message":"PaymentsModule dependencies initialized","timestamp":"2026-06-17T23:56:30.356Z"}
+{"context":"RoutesResolver","level":"info","message":"AuthController {/api/auth}:","timestamp":"2026-06-17T23:56:30.429Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/register, POST} route","timestamp":"2026-06-17T23:56:30.436Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/login, POST} route","timestamp":"2026-06-17T23:56:30.438Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/logout, POST} route","timestamp":"2026-06-17T23:56:30.440Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/auth/refresh, POST} route","timestamp":"2026-06-17T23:56:30.440Z"}
+{"context":"RoutesResolver","level":"info","message":"UsersController {/api/users}:","timestamp":"2026-06-17T23:56:30.442Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, GET} route","timestamp":"2026-06-17T23:56:30.443Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me, PATCH} route","timestamp":"2026-06-17T23:56:30.444Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/users/me/avatar, POST} route","timestamp":"2026-06-17T23:56:30.446Z"}
+{"context":"RoutesResolver","level":"info","message":"CategoriesController {/api/categories}:","timestamp":"2026-06-17T23:56:30.447Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, GET} route","timestamp":"2026-06-17T23:56:30.449Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories, POST} route","timestamp":"2026-06-17T23:56:30.452Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, PATCH} route","timestamp":"2026-06-17T23:56:30.454Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/categories/:id, DELETE} route","timestamp":"2026-06-17T23:56:30.456Z"}
+{"context":"RoutesResolver","level":"info","message":"CoursesController {/api/courses}:","timestamp":"2026-06-17T23:56:30.457Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, GET} route","timestamp":"2026-06-17T23:56:30.459Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, GET} route","timestamp":"2026-06-17T23:56:30.460Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses, POST} route","timestamp":"2026-06-17T23:56:30.462Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, PATCH} route","timestamp":"2026-06-17T23:56:30.463Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:id, DELETE} route","timestamp":"2026-06-17T23:56:30.464Z"}
+{"context":"RoutesResolver","level":"info","message":"SectionsController {/api/courses/:courseId/sections}:","timestamp":"2026-06-17T23:56:30.464Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections, POST} route","timestamp":"2026-06-17T23:56:30.466Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, PATCH} route","timestamp":"2026-06-17T23:56:30.467Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/courses/:courseId/sections/:id, DELETE} route","timestamp":"2026-06-17T23:56:30.468Z"}
+{"context":"RoutesResolver","level":"info","message":"LecturesController {/api}:","timestamp":"2026-06-17T23:56:30.471Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures, POST} route","timestamp":"2026-06-17T23:56:30.474Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/lectures/:id, GET} route","timestamp":"2026-06-17T23:56:30.476Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, PATCH} route","timestamp":"2026-06-17T23:56:30.477Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/sections/:sectionId/lectures/:id, DELETE} route","timestamp":"2026-06-17T23:56:30.478Z"}
+{"context":"RoutesResolver","level":"info","message":"EnrollmentsController {/api/enrollments}:","timestamp":"2026-06-17T23:56:30.478Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/auto, POST} route","timestamp":"2026-06-17T23:56:30.479Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/enrollments/me, GET} route","timestamp":"2026-06-17T23:56:30.480Z"}
+{"context":"RoutesResolver","level":"info","message":"ProgressController {/api/progress}:","timestamp":"2026-06-17T23:56:30.480Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/complete, POST} route","timestamp":"2026-06-17T23:56:30.481Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/progress/course/:courseId, GET} route","timestamp":"2026-06-17T23:56:30.482Z"}
+{"context":"RoutesResolver","level":"info","message":"AdminController {/api/admin}:","timestamp":"2026-06-17T23:56:30.484Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users, GET} route","timestamp":"2026-06-17T23:56:30.486Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses, GET} route","timestamp":"2026-06-17T23:56:30.487Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id, GET} route","timestamp":"2026-06-17T23:56:30.487Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/approve, PATCH} route","timestamp":"2026-06-17T23:56:30.488Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/courses/:id/reject, PATCH} route","timestamp":"2026-06-17T23:56:30.489Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/webhook-logs, GET} route","timestamp":"2026-06-17T23:56:30.491Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/audit-logs, GET} route","timestamp":"2026-06-17T23:56:30.492Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/weekly-summary, POST} route","timestamp":"2026-06-17T23:56:30.492Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/inactive-reminder, POST} route","timestamp":"2026-06-17T23:56:30.493Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/scheduler/cleanup-logs, POST} route","timestamp":"2026-06-17T23:56:30.494Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/admin/users/:id/role, PATCH} route","timestamp":"2026-06-17T23:56:30.495Z"}
+{"context":"RoutesResolver","level":"info","message":"ReviewsController {/api/reviews}:","timestamp":"2026-06-17T23:56:30.496Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, POST} route","timestamp":"2026-06-17T23:56:30.497Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews, GET} route","timestamp":"2026-06-17T23:56:30.498Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/my, GET} route","timestamp":"2026-06-17T23:56:30.499Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/mine, GET} route","timestamp":"2026-06-17T23:56:30.500Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, PATCH} route","timestamp":"2026-06-17T23:56:30.501Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/reviews/:id, DELETE} route","timestamp":"2026-06-17T23:56:30.502Z"}
+{"context":"RoutesResolver","level":"info","message":"InstructorController {/api/instructor}:","timestamp":"2026-06-17T23:56:30.502Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, GET} route","timestamp":"2026-06-17T23:56:30.504Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, GET} route","timestamp":"2026-06-17T23:56:30.505Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses, POST} route","timestamp":"2026-06-17T23:56:30.505Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, PATCH} route","timestamp":"2026-06-17T23:56:30.506Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id, DELETE} route","timestamp":"2026-06-17T23:56:30.507Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/instructor/courses/:id/submit, PATCH} route","timestamp":"2026-06-17T23:56:30.507Z"}
+{"context":"RoutesResolver","level":"info","message":"PaymentsController {/api/payments}:","timestamp":"2026-06-17T23:56:30.508Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/confirm, POST} route","timestamp":"2026-06-17T23:56:30.509Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/my, GET} route","timestamp":"2026-06-17T23:56:30.510Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments, GET} route","timestamp":"2026-06-17T23:56:30.511Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/payments/:id/refund, POST} route","timestamp":"2026-06-17T23:56:30.512Z"}
+{"context":"RoutesResolver","level":"info","message":"SubscriptionsController {/api/subscriptions}:","timestamp":"2026-06-17T23:56:30.513Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, POST} route","timestamp":"2026-06-17T23:56:30.514Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/email, DELETE} route","timestamp":"2026-06-17T23:56:30.515Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, POST} route","timestamp":"2026-06-17T23:56:30.516Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/discord, DELETE} route","timestamp":"2026-06-17T23:56:30.516Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/subscriptions/my, GET} route","timestamp":"2026-06-17T23:56:30.517Z"}
+{"context":"RoutesResolver","level":"info","message":"HealthController {/api/health}:","timestamp":"2026-06-17T23:56:30.518Z"}
+{"context":"RouterExplorer","level":"info","message":"Mapped {/api/health, GET} route","timestamp":"2026-06-17T23:56:30.519Z"}
+{"context":"NestApplication","level":"info","message":"Nest application successfully started","timestamp":"2026-06-17T23:56:30.643Z"}
+{"context":"Bootstrap","level":"info","message":"COKOK P3 Backend started on port 3000","timestamp":"2026-06-17T23:56:30.649Z"}
